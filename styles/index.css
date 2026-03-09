@@ -43,3 +43,23 @@
     font-size: 3em;
     text-align: right;
 }
+
+
+html, body{
+height:100%;
+margin:0;
+}
+
+body{
+display:flex;
+flex-direction:column;
+min-height:100vh;
+}
+
+.container-fluid.full-height-container{
+flex:1;
+}
+
+#footer{
+margin-top:auto;
+}
