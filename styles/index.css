@@ -16,62 +16,125 @@ body {
     flex-direction: column;
     min-height: 100vh;
     color: white;
+    background-color: #2c302e;
 }
 
-/* Fondo superior igual al resto del sitio */
+/* Fondo general real de la página */
+.home-page,
+.home-section {
+    background-color: #2c302e;
+}
+
+/* Wrapper superior */
 #navbar-margin {
     background-color: #2c302e;
+    padding: 12px 18px 0 18px;
 }
 
-/* Fondo general de la página */
-.container-fluid {
-    background-color: #2c302e;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+/* Barra negra solamente */
+#barraNav {
+    background-color: #000;
+    border: 2px solid #01bb30;
+    border-radius: 40px;
+    padding: 0.8rem 1.4rem;
+    max-width: 1800px;
+    margin: 0 auto;
 }
 
+/* Evita que Bootstrap/meta estilos te pinten todo de negro */
+.container-fluid,
 .full-height-container {
-    width: 100%;
-    flex: 1;
+    background-color: transparent;
 }
 
-/* Texto de presentación */
+.home-section {
+    flex: 1;
+    width: 100%;
+    padding: 2rem 0 1rem 0;
+}
+
+.full-height {
+    min-height: calc(100vh - 180px);
+}
+
+/* Texto principal */
 #presentationTxt {
     font-family: PHCT, sans-serif;
     color: white;
-    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
 }
 
-/* Nombre */
 #theName {
     margin: 0;
-    padding: 0;
-    margin-right: 0;
+    padding-right: 2rem;
     border-right: #01bb30 3px solid;
     word-wrap: break-word;
 }
 
-/* Texto grande */
 #word {
     font-size: 3em;
     text-align: right;
+    margin: 0;
+    line-height: 1.1;
 }
 
-/* Footer pegado abajo */
+/* Imagen */
+.photo-column {
+    padding: 2rem;
+}
+
+.profile-photo {
+    width: 65%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 18px rgba(1, 187, 48, 0.12);
+}
+
+/* Footer */
 #footer {
     margin-top: auto;
 }
 
 /* Responsive */
 @media (max-width: 767px) {
+    #navbar-margin {
+        padding: 10px 12px 0 12px;
+    }
+
+    #barraNav {
+        border-radius: 24px;
+        padding: 0.7rem 1rem;
+    }
+
+    .full-height {
+        min-height: auto;
+    }
+
+    #presentationTxt {
+        padding: 2rem 1rem 1rem 1rem;
+    }
+
     #theName {
         border-right: none;
         border-bottom: 3px solid #01bb30;
+        padding-right: 0;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
     }
 
     #word {
         text-align: center;
         font-size: 2.2em;
+    }
+
+    .photo-column {
+        padding: 1rem 1rem 2rem 1rem;
+    }
+
+    .profile-photo {
+        width: 80%;
     }
 }
