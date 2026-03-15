@@ -11,16 +11,20 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<link rel="stylesheet" href="/hacked/styles/recursos.css">
+
+	<!-- Primero estilos globales -->
 	<link rel="stylesheet" href="/hacked/styles/navbar.css">
 	<link rel="stylesheet" href="/hacked/styles/footer.css">
+
+	<!-- Al final el CSS de esta página para que sí sobrescriba -->
+	<link rel="stylesheet" href="/hacked/styles/recursos.css">
 </head>
 
 <body>
 	<!-- NavBar -->
 	<div class="container-fluid full-height-container" id="navbar-margin">
 		<nav class="navbar navbar-expand-lg" id="barraNav">
-			<div class="container">
+			<div class="container" id="navbarContainer">
 				<a class="navbar-brand" id="brandName" href="/hacked/index.html">
 					<img src="/hacked/image/logoPH.jpg" alt="PumaHat logo" height="50px">
 					Josué HR
@@ -99,7 +103,6 @@
 			</div>
 
 			<div class="row g-4 mt-1">
-				<!-- Sidebar -->
 				<div class="col-lg-4">
 					<div class="cv-card">
 						<h3 class="section-title"><i class="fas fa-code"></i> Technical Skills</h3>
@@ -141,7 +144,6 @@
 					</div>
 				</div>
 
-				<!-- Main content -->
 				<div class="col-lg-8">
 					<div class="cv-card">
 						<h3 class="section-title"><i class="fas fa-user"></i> Profile</h3>
@@ -233,16 +235,20 @@
 			<div class="row" id="footer-info">
 				<div class="col-md-6" id="contact-info">
 					<h3>Contact Me</h3>
-					<p>e-mail: <a href="mailto:josuehnr@gmail.com">josuehnr@gmail.com</a></p>
+					<p>Email: <a href="mailto:josuehnr@gmail.com">josuehnr@gmail.com</a></p>
 				</div>
+
 				<div class="col-md-6" id="contact-info-social">
 					<section class="mb-4">
 						<a data-mdb-ripple-init class="btn btn-outline btn-floating m-1"
-							href="https://www.instagram.com/joshy.hr/" target="_blank" role="button"><i
-								class="fab fa-instagram"></i></a>
+							href="https://www.instagram.com/joshy.hr/" target="_blank" role="button">
+							<i class="fab fa-instagram"></i>
+						</a>
+
 						<a data-mdb-ripple-init class="btn btn-outline btn-floating m-1"
-							href="https://www.linkedin.com/in/josu%C3%A9-hern%C3%A1ndez-rubio-800b81353/" target="_blank" role="button"><i
-								class="fab fa-linkedin-in"></i></a>
+							href="https://www.linkedin.com/in/josu%C3%A9-hern%C3%A1ndez-rubio-800b81353/" target="_blank" role="button">
+							<i class="fab fa-linkedin-in"></i>
+						</a>
 					</section>
 				</div>
 			</div>
