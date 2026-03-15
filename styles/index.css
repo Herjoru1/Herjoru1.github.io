@@ -1,8 +1,12 @@
+#navbar-margin {
+    background-color: black;
 @font-face {
     font-family: PHCT;
     src: url(PHCT_FONT.ttf);
 }
 
+.container-fluid {
+    background-color: black;
 html,
 body {
     height: 100%;
@@ -11,130 +15,100 @@ body {
     background-color: #2c302e;
 }
 
+#presentationTxt {
+    font-family: PHCT;
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     color: white;
-    background-color: #2c302e;
-}
-
-/* Fondo general real de la página */
-.home-page,
-.home-section {
-    background-color: #2c302e;
-}
-
-/* Wrapper superior */
-#navbar-margin {
-    background-color: #2c302e;
-    padding: 12px 18px 0 18px;
-}
-
-/* Barra negra solamente */
-#barraNav {
-    background-color: #000;
-    border: 2px solid #01bb30;
-    border-radius: 40px;
-    padding: 0.8rem 1.4rem;
-    max-width: 1800px;
-    margin: 0 auto;
-}
-
-/* Evita que Bootstrap/meta estilos te pinten todo de negro */
-.container-fluid,
-.full-height-container {
-    background-color: transparent;
-}
-
-.home-section {
-    flex: 1;
-    width: 100%;
-    padding: 2rem 0 1rem 0;
-}
-
-.full-height {
-    min-height: calc(100vh - 180px);
-}
-
-/* Texto principal */
-#presentationTxt {
-    font-family: PHCT, sans-serif;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
+    display: grid;
+    place-items: rigth;
+    
 }
 
 #theName {
-    margin: 0;
-    padding-right: 2rem;
+	  margin: 0;
+    padding: 0;
+    margin-right: 0px;
     border-right: #01bb30 3px solid;
     word-wrap: break-word;
+}
+
+@media (max-width: 767px) {
+    #theName {
+        border-right: none;
+        border-bottom: 3px solid #01bb30; /* Cambia la línea a horizontal en dispositivos móviles */
+    }
+/* Fondo superior igual al resto del sitio */
+#navbar-margin {
+    background-color: #2c302e;
+}
+
+/* Fondo general de la página */
+.container-fluid {
+    background-color: #2c302e;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.full-height-container {
+    width: 100%;
+    flex: 1;
 }
 
 #word {
     font-size: 3em;
     text-align: right;
+/* Texto de presentación */
+#presentationTxt {
+    font-family: PHCT, sans-serif;
+    color: white;
+    display: grid;
+}
+
+
+html, body{
+height:100%;
+margin:0;
+/* Nombre */
+#theName {
     margin: 0;
-    line-height: 1.1;
+    padding: 0;
+    margin-right: 0;
+    border-right: #01bb30 3px solid;
+    word-wrap: break-word;
 }
 
-/* Imagen */
-.photo-column {
-    padding: 2rem;
+body{
+display:flex;
+flex-direction:column;
+min-height:100vh;
+/* Texto grande */
+#word {
+    font-size: 3em;
+    text-align: right;
 }
 
-.profile-photo {
-    width: 65%;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 0 18px rgba(1, 187, 48, 0.12);
-}
-
-/* Footer */
+.container-fluid.full-height-container{
+flex:1;
+/* Footer pegado abajo */
 #footer {
     margin-top: auto;
 }
 
+#footer{
+margin-top:auto;
 /* Responsive */
 @media (max-width: 767px) {
-    #navbar-margin {
-        padding: 10px 12px 0 12px;
-    }
-
-    #barraNav {
-        border-radius: 24px;
-        padding: 0.7rem 1rem;
-    }
-
-    .full-height {
-        min-height: auto;
-    }
-
-    #presentationTxt {
-        padding: 2rem 1rem 1rem 1rem;
-    }
-
     #theName {
         border-right: none;
         border-bottom: 3px solid #01bb30;
-        padding-right: 0;
-        padding-bottom: 1rem;
-        margin-bottom: 1rem;
     }
 
     #word {
         text-align: center;
         font-size: 2.2em;
-    }
-
-    .photo-column {
-        padding: 1rem 1rem 2rem 1rem;
-    }
-
-    .profile-photo {
-        width: 80%;
     }
 }
