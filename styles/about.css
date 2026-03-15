@@ -39,3 +39,23 @@
 #space {
     background-color: #2c302e;
 }
+@media (max-width: 991.98px) {
+    #barraNav {
+        overflow: visible !important;
+    }
+
+    #navbarSupportedContent {
+        margin-top: 0.8rem;
+        padding-top: 0.8rem;
+        border-top: 1px solid rgba(1, 187, 48, 0.35);
+    }
+
+    #navbarSupportedContent .navbar-nav {
+        gap: 0.35rem;
+    }
+
+    #navbarSupportedContent .nav-link {
+        display: block;
+        padding: 0.65rem 0;
+    }
+}
